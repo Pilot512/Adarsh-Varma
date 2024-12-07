@@ -1,0 +1,20 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><script>function appendValue(value) {
+    document.getElementById("display").value += value;
+}
+
+function clearDisplay() {
+    document.getElementById("display").value = "";
+}
+
+function backspace() {
+    let display = document.getElementById("display").value;
+    document.getElementById("display").value = display.slice(0, -1);
+}
+
+function calculate() {
+    try {
+        document.getElementById("display").value = eval(document.getElementById("display").value);
+    } catch (Fail) {
+        document.getElementById("display").value = "Your value is Fail";
+    }
+}</script>
